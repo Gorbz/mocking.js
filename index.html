@@ -16,15 +16,6 @@
 		<!-- Printing and PDF exports -->
 		<script type="text/x-mathjax-config">
   		MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-		
-
-
-
-	dependencies: [
-		{ src: 'plugin/math/math.js', async: true }
-	]
-});
-		
 		</script>
 		<script type="text/javascript"
   			src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -36,7 +27,6 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
-		<!-- HEAD -->
 	</head>
 	<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
 	<body>
@@ -118,7 +108,7 @@
 			Reveal.initialize({
 				controls: true,
 				progress: true,
-				history: false,
+				history: true,
 				center: true,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
@@ -126,8 +116,6 @@
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true }
 				]
-	},
-
 			});
 		</script>
 	</body>
