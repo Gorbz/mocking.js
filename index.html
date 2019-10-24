@@ -14,6 +14,12 @@
 		<link rel="stylesheet" href="lib/css/monokai.css">
 
 		<!-- Printing and PDF exports -->
+		<script type="text/x-mathjax-config">
+  		MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+		</script>
+		<script type="text/javascript"
+  			src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
 		<script>
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
@@ -28,20 +34,18 @@
 			<div class="slides">
 				<section>
 					<section> <!-- SLIDE 1: Title -->
-						<h3><b>Mocking the Coulomb branch</b></h3>
+						<h3><b>Mocking the Coulomb branch</b></h3><br>
 						<p><font size="6" color="#A8DED1">George Korpas</font></p>
 						<font size="6">Trinity College Dublin  &  Champalimaud Research</font>
-					</section> 
+					</section>
 					<section>
-						<small>
-							Based on work with Jan Manschot, Greg Moore and Iurii Nidaiev <br><br>
-								<ul>
+							Based on work with <p style="color:#7BC7B5">Jan Manschot, Greg Moore and Iurii Nidaiev</p> <br><br>
+								<ul style="list-style-type:circle;">
  								 <li>1707.06235</li>
  								 <li>1810.07057</li>
- 								 <li>1901.03540</li> 
-								 <li>1912.xxxxx</li> 
-								</ul><br><br> 
-						</small>
+ 								 <li>1901.03540</li>
+								 <li>1912.xxxxx</li>
+								</ul><br><br>
 					</section>
 				</section>
 				<section> <!-- SLIDE 2: Introduction -->
@@ -52,14 +56,48 @@
 						What is the goal of life?
 					</section>
 					<section>
-						Compute correlation functions in QFT. <br><br>
-						<div lang="latex">
-							\langle O \rangle
-						</div>
+						Compute correlation functions in gauge theories. Especially in the IR. <br><br>
+						$$ \left\langle \prod_i \mathcal{O}_i \right\rangle $$
+					</section>
+					<section>
+						In general this is very hard. <br><br>
+						Use supersymmetry and other simplifying principles.
+					</section>
+					<section>
+						Seiberg and Witten were able make remarkable progress into the solution of $\mathcal{N}=2$ SYM in 1994. <br><br>
+
+						Let me remind you.
+					</section>
+					<section>
+						<p>
+						<ul style="list-style-type:circle;">
+						 <li>We work with a $\mathcal{N}=2$ SYM theory with gauge group $SU(2)$,</li> <br>
+						 <li>The field content is a vector multiplet $(A, \phi, \psi, \lambda),$</li> <br>
+						 <li>The Coulomb branch is given by the minima of the potential $u = \langle {\rm Tr}(\phi^2)\rangle $</li> <br>
+						 <li>Coupling constant of the theory is  $\tau = \frac{\theta}{2\pi}+ \frac{4\pi}{g^2}$</li>
+						</ul>
+					</p>
+					</section>
+					<section>
+						The Coulomb branch $\mathcal{B}$ is isomorphic to <br><br>
+						$\mathcal{B} \cong \mathbb{CP}^1 / \{ \pm 1, \infty\}$ <br><br>
+						Due to Riemann's uniformization theorem though we have <br><br>
+						$ \mathcal{B} \cong \mathcal{H}/\Gamma^0(4)$.
+					</section>
+					<section>
+						The Coulomb branch $\mathcal{B}$ looks as follows.<br><br>
+						<figure>
+	  						<img src="FD3.png" alt="The Pulpit Rock" width="554" height="288">
+						</figure><br>
+						$u(\tau)$, the Coulomb branch parameter, is invariant under a $\Gamma^0(4)$ transformation.
+					</section>
+					<section>
+						Can we solve the theory? <br><br>
+						<font color="#A8DED1">Yes, if we consider a topological version of it.</font>
 					</section>
 				</section>
 			</div>
-		</div> 
+		</div>
 
 		<script src="js/reveal.js"></script>
 
@@ -68,6 +106,10 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
@@ -75,6 +117,6 @@
 					{ src: 'plugin/highlight/highlight.js', async: true }
 				]
 			});
-		</script> 
+		</script>
 	</body>
 </html>
